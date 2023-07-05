@@ -13,7 +13,7 @@ vid = cv2.VideoCapture(1)
 while True:
     # 카메라 구동
     ret, frame = vid.read()
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # 얼굴 컴출
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
