@@ -1,5 +1,4 @@
 import cv2
-
 """
     XML 포맷의 분류기 코드
     - frontalface: 정면
