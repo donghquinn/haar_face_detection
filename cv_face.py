@@ -18,12 +18,14 @@ def haarFaceDetection():
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         """
+            얼굴 탐지
+            
             gray         : 분석될 이미지 또는 영상 프레임
             scaleFactor  :  이미지에서 얼굴 크기가 서로 다른 것을 보상해주는값 
             minNeighbors : 얼굴 사이의 최소 간격( 픽셀 ) 
             minSize      : 얼굴의 최소 크기
         """
-        faces = face_cascade.detectMultiScale(gray,scaleFactor=1.3,minNeighbors=5,minSize=(30,30))
+        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5, minSize=(30,30))
 
         # 얼굴 좌표 선택
         for (x,y,w,h) in faces:
