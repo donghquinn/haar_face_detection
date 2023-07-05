@@ -20,13 +20,13 @@ while True:
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 
 
-    """
-        얼굴 좌표 선택
-    """
+
+    # 얼굴 좌표 선택
+
     for (x,y,w,h) in faces:
-            """
-                얼굴 좌표를 받아 사각형으로 표시
-            """
+
+            # 얼굴 좌표를 받아 사각형으로 표시
+
             cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
 
             """
